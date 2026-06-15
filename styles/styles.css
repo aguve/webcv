@@ -51,10 +51,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
-    color: white;
     margin: 0 auto;
     backdrop-filter: blur(10px);
+}
+
+.avatar .initials {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
 }
 
 .section-title {
@@ -110,6 +115,19 @@ body {
 .timeline-date {
     color: #a0a0c0;
     font-size: 0.875rem;
+}
+
+.form-control::placeholder {
+    color: #a0a0c0 !important;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #a0a0c0 !important;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #a0a0c0 !important;
 }
 
 .skill-badge {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi CV</title>
+    <title>Andreu Guzman Vendrell - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,17 +13,20 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white fw-bold" href="#">Mi CV</a>
+            <a class="navbar-brand text-white fw-bold" href="#">AG</a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="bi bi-list text-white fs-4"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#experiencia">Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#educacion">Educación</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto">Contacto</a></li>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#educacion" data-i18n="nav.education">Formación</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="langToggle" class="btn btn-outline-light btn-sm rounded-pill px-3">EN</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -34,50 +37,79 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0">
                     <div class="avatar">
-                        <i class="bi bi-person"></i>
+                        <span class="initials">AG</span>
                     </div>
                 </div>
                 <div class="col-lg-8 text-white">
                     <h1 class="display-4 fw-bold mb-3">Andreu Guzman Vendrell</h1>
-                    <p class="lead mb-4 opacity-75">Programador & Músico | Diseñador de Software</p>
-                    <p class="mb-4 opacity-75">He trabajado como diseñador de software en entornos industriales y corporativos. Experiencia en Osmofilter, NTT Data, Alapont Group, Ford y Siemens, abarcando automatización, desarrollo web y soluciones internas. Impulso TourIA, combinando IA y turismo cultural.</p>
+                    <p class="lead mb-4 opacity-75" data-i18n="hero.title">Programador / Desarrollador Web</p>
+                    <p class="mb-4 opacity-75" data-i18n="hero.desc">Programador con formación en Desarrollo de Aplicaciones Informáticas y amplia experiencia en desarrollo web con diversas tecnologías: PHP, Python, Java, JavaScript. Conocimientos en Machine Learning y Deep Learning. Experiencia trabajando con clientes de primer nivel como BBVA.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#contacto" class="btn btn-light btn-lg rounded-pill px-4">Contáctame</a>
-                        <a href="#experiencia" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver CV</a>
+                        <a href="#contacto" class="btn btn-light btn-lg rounded-pill px-4" data-i18n="hero.contactBtn">Contáctame</a>
+                        <a href="#experiencia" class="btn btn-outline-light btn-lg rounded-pill px-4" data-i18n="hero.viewCv">Ver CV</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- <section id="perfil">
+        <div class="container">
+            <h2 class="section-title text-white fw-bold">Perfil</h2>
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="lead opacity-75">Programador con formación en Desarrollo de Aplicaciones Informáticas y amplia experiencia en desarrollo web con diversas tecnologías: PHP, Python, Java, JavaScript. Conocimientos en Machine Learning y Deep Learning. Experiencia trabajando con clientes de primer nivel como BBVA.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
     <section id="experiencia">
         <div class="container">
-            <h2 class="section-title text-white fw-bold">Experiencia Laboral</h2>
+            <h2 class="section-title text-white fw-bold" data-i18n="experience.title">Experiencia Profesional</h2>
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="timeline-item">
-                        <h5 class="text-white mb-1">Diseñador de Software</h5>
-                        <span class="timeline-date">Experiencia reciente</span>
-                        <p class="text-info mb-2">Siemens & Ford</p>
-                        <p class="opacity-75">Desarrollo de soluciones de automatización y software industrial. Implementación de sistemas internos y herramientas de desarrollo web.</p>
+                        <h5 class="text-white mb-1" data-i18n="exp.1.title">Programador</h5>
+                        <span class="timeline-date">2017</span>
+                        <p class="text-info mb-2" data-i18n="exp.1.company">Avanade</p>
+                        <p class="opacity-75" data-i18n="exp.1.desc">Desarrollo web con el framework Microsoft .NET, uso de WebForms, JS y bases de datos SQL Server. Proyecto para el banco BBVA.</p>
                     </div>
                     <div class="timeline-item">
-                        <h5 class="text-white mb-1">Diseñador de Software</h5>
-                        <span class="timeline-date">Experiencia previa</span>
-                        <p class="text-info mb-2">NTT Data & Alapont Group</p>
-                        <p class="opacity-75">Diseño y desarrollo de software en entornos corporativos e industriales. Enfoque en automatización y soluciones web.</p>
+                        <h5 class="text-white mb-1" data-i18n="exp.2.title">Programador</h5>
+                        <span class="timeline-date">2016</span>
+                        <p class="text-info mb-2" data-i18n="exp.2.company">Hemav</p>
+                        <p class="opacity-75" data-i18n="exp.2.desc">Desarrollo de aplicación de carga de datos de una API a la cache del proyecto para facilitar su acceso. Framework utilizado: Laravel 5, PHP.</p>
                     </div>
                     <div class="timeline-item">
-                        <h5 class="text-white mb-1">Diseñador de Software</h5>
-                        <span class="timeline-date">Experiencia técnica</span>
-                        <p class="text-info mb-2">Osmofilter</p>
-                        <p class="opacity-75">Desarrollo de soluciones de software para entornos industriales y procesos de filtración.</p>
+                        <h5 class="text-white mb-1" data-i18n="exp.3.title">Programador</h5>
+                        <span class="timeline-date">2015</span>
+                        <p class="text-info mb-2" data-i18n="exp.3.company">Por cuenta propia</p>
+                        <p class="opacity-75" data-i18n="exp.3.desc">Desarrollo en PHP de aplicación para enlazar posibles vendedores y compradores dado un producto. Base de datos con SQL.</p>
                     </div>
                     <div class="timeline-item">
-                        <h5 class="text-white mb-1">Fundador & Desarrollador</h5>
-                        <span class="timeline-date">Proyecto actual</span>
-                        <p class="text-info mb-2">TourIA</p>
-                        <p class="opacity-75">Impulso de proyecto emprendedor combinando IA y turismo cultural. Desarrollo de soluciones innovadoras para el sector turístico.</p>
+                        <h5 class="text-white mb-1" data-i18n="exp.4.title">Programador</h5>
+                        <span class="timeline-date">2013 - 2014</span>
+                        <p class="text-info mb-2" data-i18n="exp.4.company">Tecnitek IT Solutions</p>
+                        <p class="opacity-75" data-i18n="exp.4.desc">Desarrollo de aplicación para gestionar la adjudicación de vacaciones de la empresa. Tecnologías: PHP, MySQL, HTML, CSS y JS.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.5.title">Administrador de Sistemas</h5>
+                        <span class="timeline-date">2010 - 2011</span>
+                        <p class="text-info mb-2" data-i18n="exp.5.company">Il·lustre Col·legi d'Advocats de Barcelona (ICAB)</p>
+                        <p class="opacity-75" data-i18n="exp.5.desc">Tareas de mantenimiento, corrección y configuración de los sistemas informáticos del ICAB.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.6.title">Programador</h5>
+                        <span class="timeline-date">2010 - 2011</span>
+                        <p class="text-info mb-2" data-i18n="exp.6.company">SIGMA Gestión Universitaria</p>
+                        <p class="opacity-75" data-i18n="exp.6.desc">Desarrollo y mantenimiento de páginas web de universidades del estado español. Tecnologías: Java (backend), XML y SQL (base de datos).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.7.title">Responsable de Turno</h5>
+                        <span class="timeline-date">2006 - 2007</span>
+                        <p class="text-info mb-2" data-i18n="exp.7.company">Interactive Games Solutions S.L.</p>
+                        <p class="opacity-75" data-i18n="exp.7.desc">Gestión y organización del Departamento Financiero.</p>
                     </div>
                 </div>
             </div>
@@ -86,34 +118,158 @@
 
     <section id="educacion" style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <h2 class="section-title text-white fw-bold">Educación</h2>
-            <div class="row">
+            <h2 class="section-title text-white fw-bold" data-i18n="education.title">Formación</h2>
+            <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="card-custom">
+                    <div class="card-custom h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="contact-icon flex-shrink-0">
                                 <i class="bi bi-mortarboard"></i>
                             </div>
                             <div>
-                                <h5 class="text-white mb-1">Ingeniería en Sistemas</h5>
-                                <p class="text-info mb-1">Universidad Nacional</p>
-                                <span class="timeline-date">2015 - 2019</span>
-                                <p class="opacity-75 mt-2 mb-0">Graduado con honores. Especialización en desarrollo de software y bases de datos.</p>
+                                <h5 class="text-white mb-1" data-i18n="edu.1.title">CFGS Desarrollo de Aplicaciones Informáticas</h5>
+                                <p class="text-info mb-1" data-i18n="edu.1.institution">Institut Jaume Balmes, Barcelona</p>
+                                <span class="timeline-date">2009</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card-custom">
+                    <div class="card-custom h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="contact-icon flex-shrink-0">
-                                <i class="bi bi-award"></i>
+                                <i class="bi bi-mortarboard"></i>
                             </div>
                             <div>
-                                <h5 class="text-white mb-1">Certificación AWS</h5>
-                                <p class="text-info mb-1">Amazon Web Services</p>
+                                <h5 class="text-white mb-1" data-i18n="edu.2.title">Fullstack Bootcamp - Java</h5>
+                                <p class="text-info mb-1" data-i18n="edu.2.institution">Fundación ONCE</p>
+                                <span class="timeline-date">2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.3.title">Desarrollo de aplicaciones móvil para iOS y Android con Flutter</h5>
+                                <p class="text-info mb-1" data-i18n="edu.3.institution">SEPE</p>
+                                <span class="timeline-date">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.4.title">Programación, Estadística e IA</h5>
+                                <p class="text-info mb-1" data-i18n="edu.4.institution">Samsung Innovation Campus – Universidad de Málaga</p>
                                 <span class="timeline-date">2023</span>
-                                <p class="opacity-75 mt-2 mb-0">Certificado como Solutions Architect Associate. Experiencia en arquitectura cloud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.5.title">Deep Learning: Redes Neuronales en Python</h5>
+                                <p class="text-info mb-1" data-i18n="edu.5.institution">UDEMI</p>
+                                <span class="timeline-date">2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.6.title">Machine Learning: Data Science en Python</h5>
+                                <p class="text-info mb-1" data-i18n="edu.6.institution">UDEMI</p>
+                                <span class="timeline-date">2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.7.title">Python 3</h5>
+                                <p class="text-info mb-1" data-i18n="edu.7.institution">UDEMI</p>
+                                <span class="timeline-date">2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.8.title">Desarrollo de aplicaciones web y diseño</h5>
+                                <p class="text-info mb-1" data-i18n="edu.8.institution">AVBC - Formació i inserció laboral</p>
+                                <span class="timeline-date">2016</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.9.title">Aplicaciones web con C# Microsoft .NET</h5>
+                                <p class="text-info mb-1" data-i18n="edu.9.institution">Centre de Formació Luz TI</p>
+                                <span class="timeline-date">2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.10.title">Programador Entornos Host y Desarrollo de Aplicaciones</h5>
+                                <p class="text-info mb-1" data-i18n="edu.10.institution">Luz TI</p>
+                                <span class="timeline-date">2014</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1" data-i18n="edu.11.title">Analista Programador FOAP</h5>
+                                <p class="text-info mb-1" data-i18n="edu.11.institution">Centre d'estudis ParkerGroup</p>
+                                <span class="timeline-date">2013</span>
                             </div>
                         </div>
                     </div>
@@ -124,65 +280,47 @@
 
     <section id="habilidades">
         <div class="container">
-            <h2 class="section-title text-white fw-bold">Habilidades</h2>
+            <h2 class="section-title text-white fw-bold" data-i18n="skills.title">Habilidades Técnicas</h2>
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <h5 class="text-white mb-3">Habilidades Técnicas</h5>
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="text-white">Automatización Industrial</span>
-                            <span class="opacity-75">95%</span>
-                        </div>
-                        <div class="progress progress-custom">
-                            <div class="progress-bar" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="text-white">Desarrollo Full Stack</span>
-                            <span class="opacity-75">90%</span>
-                        </div>
-                        <div class="progress progress-custom">
-                            <div class="progress-bar" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="text-white">Liderazgo Técnico</span>
-                            <span class="opacity-75">85%</span>
-                        </div>
-                        <div class="progress progress-custom">
-                            <div class="progress-bar" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="text-white">Análisis y Comunicación</span>
-                            <span class="opacity-75">90%</span>
-                        </div>
-                        <div class="progress progress-custom">
-                            <div class="progress-bar" style="width: 90%"></div>
-                        </div>
+                    <h5 class="text-white mb-3" data-i18n="skills.techs">Tecnologías</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Python 3</span>
+                        <span class="skill-badge">PHP / Laravel</span>
+                        <span class="skill-badge">Java (J2EE, J2SE)</span>
+                        <span class="skill-badge">Flutter / Dart</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
-                    <h5 class="text-white mb-3">Tecnologías & Herramientas</h5>
-<div>
-                         <span class="skill-badge">Automatización</span>
-                         <span class="skill-badge">Desarrollo Web</span>
-                         <span class="skill-badge">Python</span>
-                         <span class="skill-badge">JavaScript</span>
-                         <span class="skill-badge">Node.js</span>
-                         <span class="skill-badge">React</span>
-                         <span class="skill-badge">IA & Machine Learning</span>
-                         <span class="skill-badge">Liderazgo</span>
-                         <span class="skill-badge">Análisis de Datos</span>
-                         <span class="skill-badge">Git</span>
-                         <span class="skill-badge">Docker</span>
-                         <span class="skill-badge">Turismo Cultural</span>
-                         <span class="skill-badge">Comunicación</span>
-                         <span class="skill-badge">Scrum</span>
-                     </div>
+                    <h5 class="text-white mb-3">IDEs</h5>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">Visual Studio Code</span>
+                        <span class="skill-badge">Spyder</span>
+                        <span class="skill-badge">Apache Netbeans</span>
+                    </div>
+                    <h5 class="text-white mb-3 mt-4" data-i18n="skills.languages">Idiomas</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge" data-i18n="skills.langCat">Catalán - Nativo</span>
+                        <span class="skill-badge" data-i18n="skills.langEs">Castellano - Nativo</span>
+                        <span class="skill-badge" data-i18n="skills.langEn">Inglés - Intermedio</span>
+                        <span class="skill-badge" data-i18n="skills.langDe">Alemán - Principiante</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-12">
+                    <h5 class="text-white mb-3" data-i18n="skills.otherTitle">Otros Datos</h5>
+                    <p class="opacity-75" data-i18n="skills.otherDesc">Permiso de conducir A2 y B</p>
                 </div>
             </div>
         </div>
@@ -190,65 +328,43 @@
 
     <section id="contacto" style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <h2 class="section-title text-white fw-bold">Contacto</h2>
-            <div class="row">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-white mb-1">Email</h6>
-                            <p class="opacity-75 mb-0">aguve@hotmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-phone"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-white mb-1">Teléfono</h6>
-                            <p class="opacity-75 mb-0">+34 123 456 789</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-geo-alt"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-white mb-1">Ubicación</h6>
-                            <p class="opacity-75 mb-0">Madrid, España</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-linkedin"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-white mb-1">LinkedIn</h6>
-                            <p class="opacity-75 mb-0"><a href="https://www.linkedin.com/in/andreu-guzman-0512917b/" target="_blank" rel="noopener noreferrer">Andreu Guzman</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="card-custom">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary rounded-3 py-2" placeholder="Tu nombre">
+            <h2 class="section-title text-white fw-bold" data-i18n="contact.title">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-4">
+                            <div class="contact-item flex-column text-center">
+                                <div class="contact-icon mx-auto">
+                                    <i class="bi bi-envelope"></i>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control bg-transparent text-white border-secondary rounded-3 py-2" placeholder="Tu email">
+                                <div>
+                                    <h6 class="text-white mb-1" data-i18n="contact.email">Email</h6>
+                                    <p class="opacity-75 mb-0">aguveone@gmail.com</p>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control bg-transparent text-white border-secondary rounded-3 py-2" placeholder="Asunto">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-item flex-column text-center">
+                                <div class="contact-icon mx-auto">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white mb-1" data-i18n="contact.location">Ubicación</h6>
+                                    <p class="opacity-75 mb-0">Barcelona, España</p>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <textarea class="form-control bg-transparent text-white border-secondary rounded-3" rows="5" placeholder="Tu mensaje"></textarea>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-item flex-column text-center">
+                                <div class="contact-icon mx-auto">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white mb-1" data-i18n="contact.linkedin">LinkedIn</h6>
+                                    <p class="opacity-75 mb-0"><a href="https://www.linkedin.com/in/andreu-guzman-0512917b/" target="_blank" rel="noopener noreferrer">Andreu Guzman</a></p>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-gradient">Enviar Mensaje</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,7 +372,7 @@
     </section>
 
     <footer class="py-4 text-center" style="background: var(--dark-bg); border-top: 1px solid rgba(255,255,255,0.05);">
-        <p class="opacity-75 mb-0">&copy; 2026 aguve. Todos los derechos reservados.</p>
+        <!-- <p class="opacity-75 mb-0" data-i18n="footer.rights">&copy; 2026 aguve. Todos los derechos reservados.</p> -->
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

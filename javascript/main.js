@@ -134,11 +134,9 @@ function translate(lang) {
     btn.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('langToggle').addEventListener('click', () => {
-        const next = currentLang === 'es' ? 'en' : 'es';
-        translate(next);
-    });
+document.getElementById('langToggle').addEventListener('click', () => {
+    const next = currentLang === 'es' ? 'en' : 'es';
+    translate(next);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -149,8 +147,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         const navCollapse = document.querySelector('.navbar-collapse');
-        if (navCollapse.classList.contains('show')) {
-            new bootstrap.Collapse(navCollapse).hide();
+        if (navCollapse && navCollapse.classList.contains('show')) {
+            try {
+                new bootstrap.Collapse(navCollapse).hide();
+            } catch (_) {}
         }
     });
 });

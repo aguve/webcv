@@ -20,9 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link nav-link-custom active" href="#inicio" data-i18n="nav.home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#educacion" data-i18n="nav.education">Formación</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#educacion" data-i18n="nav.education">Formación</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto" data-i18n="nav.contact">Contacto</a></li>
                     <li class="nav-item ms-lg-3">
                         <button id="langToggle" class="btn btn-outline-light btn-sm rounded-pill px-3">EN</button>
@@ -41,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 text-white">
-                    <h1 class="display-4 fw-bold mb-3">Andreu Guzman Vendrell</h1>
+                    <h1 class="display-4 fw-bold mb-3">Andreu Guzman</h1>
                     <p class="lead mb-4 opacity-75" data-i18n="hero.title">Programador / Desarrollador Web</p>
                     <p class="mb-4 opacity-75" data-i18n="hero.desc">Programador con formación en Desarrollo de Aplicaciones Informáticas y amplia experiencia en desarrollo web con diversas tecnologías: PHP, Python, Java, JavaScript. Conocimientos en Machine Learning y Deep Learning. Experiencia trabajando con clientes de primer nivel como BBVA.</p>
                     <div class="d-flex gap-3 flex-wrap">
@@ -53,63 +54,110 @@
         </div>
     </section>
 
-    <!-- <section id="perfil">
+    <section id="proyectos" style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <h2 class="section-title text-white fw-bold">Perfil</h2>
-            <div class="row">
-                <div class="col-lg-10">
-                    <p class="lead opacity-75">Programador con formación en Desarrollo de Aplicaciones Informáticas y amplia experiencia en desarrollo web con diversas tecnologías: PHP, Python, Java, JavaScript. Conocimientos en Machine Learning y Deep Learning. Experiencia trabajando con clientes de primer nivel como BBVA.</p>
+            <h2 class="section-title text-white fw-bold" data-i18n="projects.title">Proyectos Personales</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-custom h-100 d-flex flex-column">
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-hdd-rack"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">DevLab</h5>
+                                <span class="timeline-date">Docker</span>
+                            </div>
+                        </div>
+                        <p class="opacity-75 flex-grow-1" data-i18n="projects.devlab.desc">Entorno de desarrollo modular basado en Docker. Un workspace compartido con múltiples contenedores para Python, Java, utilidades y base de datos, accesibles de forma independiente o conjunta.</p>
+                        <div class="d-flex gap-2 mt-auto pt-3">
+                            <a href="https://github.com/aguve/devlab" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                                <i class="bi bi-github me-1"></i> GitHub
+                            </a>
+                            <a href="https://github.com/aguve/devlab/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-sm rounded-pill px-3">
+                                <i class="bi bi-tag me-1"></i> v1.0.0
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-custom h-100 d-flex flex-column">
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-cup-hot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">CoffeeBreak</h5>
+                                <span class="timeline-date">Java · Bootstrap</span>
+                            </div>
+                        </div>
+                        <p class="opacity-75 flex-grow-1" data-i18n="projects.coffeebreak.desc">Aplicación web full-stack para gestión de pedidos en cafetería universitaria. Permite a los estudiantes explorar el menú, realizar pedidos y seguir su estado en tiempo real. Backend en Java con Servlets Jakarta, MySQL y frontend responsive con Bootstrap.</p>
+                        <div class="d-flex gap-2 mt-auto pt-3">
+                            <a href="https://github.com/aguve/CoffeeBreak" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                                <i class="bi bi-github me-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-custom h-100 d-flex flex-column">
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="bi bi-truck"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">Damm-Logistic</h5>
+                                <span class="timeline-date">JavaScript · Leaflet.js</span>
+                            </div>
+                        </div>
+                        <p class="opacity-75 flex-grow-1" data-i18n="projects.dammlogistic.desc">Aplicación SPA para optimización logística del centro de distribución DDI Mollet de Estrella Damm. Incluye optimización de rutas con algoritmo Nearest-Neighbor, planificación de carga LIFO y dashboard con gráficos interactivos.</p>
+                        <div class="d-flex gap-2 mt-auto pt-3">
+                            <a href="https://github.com/aguve/Damm-Logistic" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                                <i class="bi bi-github me-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <section id="experiencia">
+    <section id="habilidades">
         <div class="container">
-            <h2 class="section-title text-white fw-bold" data-i18n="experience.title">Experiencia Profesional</h2>
+            <h2 class="section-title text-white fw-bold" data-i18n="skills.title">Habilidades Técnicas</h2>
             <div class="row">
-                <div class="col-lg-10">
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.1.title">Programador</h5>
-                        <span class="timeline-date">2017</span>
-                        <p class="text-info mb-2" data-i18n="exp.1.company">Avanade</p>
-                        <p class="opacity-75" data-i18n="exp.1.desc">Desarrollo web con el framework Microsoft .NET, uso de WebForms, JS y bases de datos SQL Server. Proyecto para el banco BBVA.</p>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="text-white mb-3" data-i18n="skills.techs">Tecnologías</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Python 3</span>
+                        <span class="skill-badge">PHP / Laravel</span>
+                        <span class="skill-badge">Java (J2EE, J2SE)</span>
+                        <span class="skill-badge">Flutter / Dart</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
                     </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.2.title">Programador</h5>
-                        <span class="timeline-date">2016</span>
-                        <p class="text-info mb-2" data-i18n="exp.2.company">Hemav</p>
-                        <p class="opacity-75" data-i18n="exp.2.desc">Desarrollo de aplicación de carga de datos de una API a la cache del proyecto para facilitar su acceso. Framework utilizado: Laravel 5, PHP.</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="text-white mb-3">IDEs</h5>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">Visual Studio Code</span>
+                        <span class="skill-badge">Spyder</span>
+                        <span class="skill-badge">Apache Netbeans</span>
                     </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.3.title">Programador</h5>
-                        <span class="timeline-date">2015</span>
-                        <p class="text-info mb-2" data-i18n="exp.3.company">Por cuenta propia</p>
-                        <p class="opacity-75" data-i18n="exp.3.desc">Desarrollo en PHP de aplicación para enlazar posibles vendedores y compradores dado un producto. Base de datos con SQL.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.4.title">Programador</h5>
-                        <span class="timeline-date">2013 - 2014</span>
-                        <p class="text-info mb-2" data-i18n="exp.4.company">Tecnitek IT Solutions</p>
-                        <p class="opacity-75" data-i18n="exp.4.desc">Desarrollo de aplicación para gestionar la adjudicación de vacaciones de la empresa. Tecnologías: PHP, MySQL, HTML, CSS y JS.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.5.title">Administrador de Sistemas</h5>
-                        <span class="timeline-date">2010 - 2011</span>
-                        <p class="text-info mb-2" data-i18n="exp.5.company">Il·lustre Col·legi d'Advocats de Barcelona (ICAB)</p>
-                        <p class="opacity-75" data-i18n="exp.5.desc">Tareas de mantenimiento, corrección y configuración de los sistemas informáticos del ICAB.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.6.title">Programador</h5>
-                        <span class="timeline-date">2010 - 2011</span>
-                        <p class="text-info mb-2" data-i18n="exp.6.company">SIGMA Gestión Universitaria</p>
-                        <p class="opacity-75" data-i18n="exp.6.desc">Desarrollo y mantenimiento de páginas web de universidades del estado español. Tecnologías: Java (backend), XML y SQL (base de datos).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h5 class="text-white mb-1" data-i18n="exp.7.title">Responsable de Turno</h5>
-                        <span class="timeline-date">2006 - 2007</span>
-                        <p class="text-info mb-2" data-i18n="exp.7.company">Interactive Games Solutions S.L.</p>
-                        <p class="opacity-75" data-i18n="exp.7.desc">Gestión y organización del Departamento Financiero.</p>
+                    <h5 class="text-white mb-3 mt-4" data-i18n="skills.languages">Idiomas</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge" data-i18n="skills.langCat">Catalán - Nativo</span>
+                        <span class="skill-badge" data-i18n="skills.langEs">Castellano - Nativo</span>
+                        <span class="skill-badge" data-i18n="skills.langEn">Inglés - Intermedio</span>
+                        <span class="skill-badge" data-i18n="skills.langDe">Alemán - Principiante</span>
                     </div>
                 </div>
             </div>
@@ -278,48 +326,63 @@
         </div>
     </section>
 
-    <section id="habilidades">
+    <section id="experiencia">
         <div class="container">
-            <h2 class="section-title text-white fw-bold" data-i18n="skills.title">Habilidades Técnicas</h2>
+            <h2 class="section-title text-white fw-bold" data-i18n="experience.title">Experiencia Profesional</h2>
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h5 class="text-white mb-3" data-i18n="skills.techs">Tecnologías</h5>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="skill-badge">HTML5</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">Python 3</span>
-                        <span class="skill-badge">PHP / Laravel</span>
-                        <span class="skill-badge">Java (J2EE, J2SE)</span>
-                        <span class="skill-badge">Flutter / Dart</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">MongoDB</span>
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">GitHub</span>
+                <div class="col-lg-10">
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.1.title">Programador</h5>
+                        <span class="timeline-date">2017</span>
+                        <p class="text-info mb-2" data-i18n="exp.1.company">Avanade</p>
+                        <p class="opacity-75" data-i18n="exp.1.desc">Desarrollo web con el framework Microsoft .NET, uso de WebForms, JS y bases de datos SQL Server. Proyecto para el banco BBVA.</p>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <h5 class="text-white mb-3">IDEs</h5>
-
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="skill-badge">Visual Studio Code</span>
-                        <span class="skill-badge">Spyder</span>
-                        <span class="skill-badge">Apache Netbeans</span>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.2.title">Programador</h5>
+                        <span class="timeline-date">2016</span>
+                        <p class="text-info mb-2" data-i18n="exp.2.company">Hemav</p>
+                        <p class="opacity-75" data-i18n="exp.2.desc">Desarrollo de aplicación de carga de datos de una API a la cache del proyecto para facilitar su acceso. Framework utilizado: Laravel 5, PHP.</p>
                     </div>
-                    <h5 class="text-white mb-3 mt-4" data-i18n="skills.languages">Idiomas</h5>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="skill-badge" data-i18n="skills.langCat">Catalán - Nativo</span>
-                        <span class="skill-badge" data-i18n="skills.langEs">Castellano - Nativo</span>
-                        <span class="skill-badge" data-i18n="skills.langEn">Inglés - Intermedio</span>
-                        <span class="skill-badge" data-i18n="skills.langDe">Alemán - Principiante</span>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.3.title">Programador</h5>
+                        <span class="timeline-date">2015</span>
+                        <p class="text-info mb-2" data-i18n="exp.3.company">Por cuenta propia</p>
+                        <p class="opacity-75" data-i18n="exp.3.desc">Desarrollo en PHP de aplicación para enlazar posibles vendedores y compradores dado un producto. Base de datos con SQL.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.4.title">Programador</h5>
+                        <span class="timeline-date">2013 - 2014</span>
+                        <p class="text-info mb-2" data-i18n="exp.4.company">Tecnitek IT Solutions</p>
+                        <p class="opacity-75" data-i18n="exp.4.desc">Desarrollo de aplicación para gestionar la adjudicación de vacaciones de la empresa. Tecnologías: PHP, MySQL, HTML, CSS y JS.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.5.title">Administrador de Sistemas</h5>
+                        <span class="timeline-date">2010 - 2011</span>
+                        <p class="text-info mb-2" data-i18n="exp.5.company">Il·lustre Col·legi d'Advocats de Barcelona (ICAB)</p>
+                        <p class="opacity-75" data-i18n="exp.5.desc">Tareas de mantenimiento, corrección y configuración de los sistemas informáticos del ICAB.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.6.title">Programador</h5>
+                        <span class="timeline-date">2010 - 2011</span>
+                        <p class="text-info mb-2" data-i18n="exp.6.company">SIGMA Gestión Universitaria</p>
+                        <p class="opacity-75" data-i18n="exp.6.desc">Desarrollo y mantenimiento de páginas web de universidades del estado español. Tecnologías: Java (backend), XML y SQL (base de datos).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white mb-1" data-i18n="exp.7.title">Responsable de Turno</h5>
+                        <span class="timeline-date">2006 - 2007</span>
+                        <p class="text-info mb-2" data-i18n="exp.7.company">Interactive Games Solutions S.L.</p>
+                        <p class="opacity-75" data-i18n="exp.7.desc">Gestión y organización del Departamento Financiero.</p>
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-lg-12">
-                    <h5 class="text-white mb-3" data-i18n="skills.otherTitle">Otros Datos</h5>
+        </div>
+    </section>
+
+    <section id="otrosdatos">
+        <div class="container">
+            <h2 class="section-title text-white fw-bold" data-i18n="skills.otherTitle">Otros Datos</h2>
+            <div class="row">
+                <div class="col-lg-10">
                     <p class="opacity-75" data-i18n="skills.otherDesc">Permiso de conducir A2 y B</p>
                 </div>
             </div>

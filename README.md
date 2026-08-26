@@ -1,2 +1,2 @@
-My deving live here. Allways growin' up!
+My deving life here. Allways growin' up!
 https://aguve.github.io/webcv/
